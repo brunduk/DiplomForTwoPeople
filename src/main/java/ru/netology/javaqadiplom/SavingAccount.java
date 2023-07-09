@@ -21,9 +21,7 @@ public class SavingAccount extends Account {
      */
     public SavingAccount(int initialBalance, int minBalance, int maxBalance, int rate) {
         if (rate < 0) {
-            throw new IllegalArgumentException(
-              "Накопительная ставка не может быть отрицательной, а у вас: " + rate
-            );
+            throw new IllegalArgumentException(rate);
         }
         this.balance = initialBalance;
         this.minBalance = minBalance;

@@ -16,19 +16,20 @@ public class CreditAccountTest {
         account.add(3_000);
 
         Assertions.assertEquals(3_000, account.getBalance());
+        System.out.println(account.getBalance());
     }
 
     @Test
     public void negativeScenario() {
         CreditAccount account = new CreditAccount(
-                0,
+                1_000,
                 5_000,
                 -15
         );
 
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-            account.add(3000);
-        });
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> account.add(3000)
+        );
     }
 
     @Test
