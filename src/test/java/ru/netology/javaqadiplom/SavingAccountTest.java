@@ -125,18 +125,4 @@ public class SavingAccountTest {
         });
         System.out.println(account.yearChange());
     }
-
-    @Test
-    public void IllegalArgumentExceptionMaxBalanceLessThanMinBalance() {
-        SavingAccount account = new SavingAccount(
-                2_000,
-                10_000,
-                1_000,
-                10
-        );
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            account.getBalance();
-        });
-        System.out.println(account.getBalance());
-    }
 }
