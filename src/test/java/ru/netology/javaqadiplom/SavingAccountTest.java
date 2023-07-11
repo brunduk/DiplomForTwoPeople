@@ -24,8 +24,9 @@ public class SavingAccountTest {
                 10_000,
                 5
         );
-        Assertions.assertEquals(false, account.pay(3_000));
-        System.out.println(account.getBalance());
+
+        account.pay(3_000);
+        Assertions.assertEquals(2_000, account.getBalance());
     }
 
     @Test
@@ -60,8 +61,9 @@ public class SavingAccountTest {
                 10_000,
                 5
         );
-        Assertions.assertEquals(true, account.add(3_000));
-        System.out.println(account.getBalance());
+
+        account.add(3_000);
+        Assertions.assertEquals(5_000, account.getBalance());
     }
 
     @Test
