@@ -21,7 +21,6 @@ public class CreditAccount extends Account {
         this.creditLimit = creditLimit;
         this.rate = rate;
     }
-
     /**
      * Операция оплаты с карты на указанную сумму.
      * В результате успешного вызова этого метода, баланс должен уменьшиться

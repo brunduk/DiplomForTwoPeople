@@ -1,6 +1,8 @@
 package ru.netology.javaqadiplom;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CreditAccountTest {
@@ -28,7 +30,7 @@ public class CreditAccountTest {
         );
 
         Assertions.assertThrows(IllegalArgumentException.class,
-                () -> account.add(3000)
+                () -> account.add(3_000)
         );
     }
 
