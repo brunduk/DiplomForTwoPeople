@@ -38,9 +38,6 @@ public class SavingAccount extends Account {
      */
     @Override
     public boolean pay(int amount) {
-        if (rate < 0) {
-            throw new NegativeRateException(rate);
-        }
         if (amount <= 0) {
             return false;
         }
