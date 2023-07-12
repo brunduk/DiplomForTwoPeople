@@ -122,9 +122,8 @@ public class SavingAccountTest {
                 10_000,
                 -10
         );
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+        Assertions.assertThrows(NegativeRateException.class, () -> {
             account.yearChange();
         });
-        System.out.println(account.yearChange());
     }
 }
