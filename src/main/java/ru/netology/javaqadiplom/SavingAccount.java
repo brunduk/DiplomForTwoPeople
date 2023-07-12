@@ -42,10 +42,10 @@ public class SavingAccount extends Account {
             return false;
         }
         int buy = balance - amount;
-        if (balance >= minBalance) {
+        if (buy >= minBalance) {
             return true;
         } else {
-            balance = buy;
+            balance = getBalance();
             return false;
         }
     }
